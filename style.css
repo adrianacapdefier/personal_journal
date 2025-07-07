@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f5a623, #f76b1c);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.intro {
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+
+.main-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 600px;
+    position: relative;
+    left: 72px;
+}
+
+
+.hero {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Formular */
+.thought-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input, .textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background: #f8f8f8;
+}
+
+.button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.link {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*listofThoughts Page*/
+
+.page-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8); /* Fundal alb semi-transparent */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbra subtile */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 100px 20px 40px;
+}
+
+/* Carduri */
+.card {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Gradient atractiv */
+    border-radius: 20px;
+    width: 350px;
+    padding: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efect hover pe card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+}
+
+
+.card-footer .card-date {
+    font-weight: bold;
+    color: #333;
+}
+
+.card:nth-child(5n+1) {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Portocaliu */
+}
+
+.card:nth-child(5n+2) {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Albastru */
+}
+
+.card:nth-child(5n+3) {
+    background: linear-gradient(135deg, #d4fc79, #96e6a1); /* Verde */
+}
+
+.card:nth-child(5n+4) {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Mov */
+}
+
+/*thoughtDetails Page*/
+
+.entry-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.entry-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.entry-content {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+.entry-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Buton de întoarcere */
+.button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+
+.edit-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.edit-button:hover {
+    background: #ffcc00;
+}
+
+/* Save Button */
+.save-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.save-button:hover {
+    background: #218838;
+}
+
+/* Delete Button */
+.delete-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background: #c82333;
+}
+
+
+.linkIndex {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8); /* Fundal alb semi-transparent */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbra subtile */
+}
+
+.linkIndex:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.filter-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); /* Fundal alb semi-transparent */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbra subtile */
+    border-radius:10px;
+}
+
+.filter-form input {
+    width: 50%;
+    padding: 15px;
+    margin: 8px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background: #f8f8f8;
+}
+
+.filterLabel {
+    margin:10px;
+}
+
+.filterButton {
+    width: 44%;
+    padding: 6px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filterButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}

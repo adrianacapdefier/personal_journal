@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Journal</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="intro">
+            <h1 class="main-title">Your Guided Journal for Growth</h1>
+            <p class="main-subtitle">
+                A minimal online journaling app with daily prompts and powerful guides to help you grow into your best self.
+            </p>
+        </div>
+
+        <div class="hero">
+            <div class="container">
+                <h2 class="title">Cum te simți azi?</h2>
+                <p class="subtitle">
+                    Notează gândurile tale și reflectează. Este jurnalul tău personal.
+                </p>
+                <form action="/index" method="POST" class="thought-form">
+                    <input type="text" name="title" placeholder="Titlul gândului" class="input" required>
+                    <textarea name="thought" placeholder="Scrie gândurile tale aici..." class="textarea" rows="4" required></textarea>
+                    <button type="submit" class="button">Salvează</button>
+                </form>
+                <a href="/listOfThoughts" class="link">Vezi toate gândurile tale</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

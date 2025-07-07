@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ entry['title'] }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        function enableEdit() {
+            document.getElementById('title').setAttribute('contenteditable', 'true');
+            document.getElementById('content').setAttribute('contenteditable', 'true');
+            document.getElementById('saveButton').style.display = 'inline-block';
+            document.getElementById('editButton').style.display = 'none';
+        }
+
+        function confirmDelete() {
+            if (confirm('Are you sure you want to delete this entry?')) {
+                window.location.href = `/delete/{{ entry['_id'] }}`;
+            }
+        }
+
+        function saveData() {
+            document.getElementById('saveTitle').value = document.getElementById('title').innerText;
+            document.getElementById('saveThought').value = document.getElementById('content').innerText;
+        }
+    </script>
+</head>
+<body>
+    <div class="entry-container">
+
+        <p id="title" class="entry-title"> {{ entry['title'] }}</p>
+
+        <p id="content" class="entry-content">{{ entry['thought'] }}</p>
+
+        <p class="entry-date"><strong>Date:</strong> {{ entry['date'].strftime('%Y-%m-%d %H:%M:%S') }}</p>
+
+            <button id="editButton" onclick="enableEdit()" class="edit-button" style="display:inline;">Edit</button>
+            <form action="/update/{{ entry['_id'] }}" method="POST">
+                <input type="hidden" name="title" id="saveTitle" value="">
+                <input type="hidden" name="thought" id="saveThought" value="">
+                <button type="submit" id="saveButton" class="save-button" onclick="saveData()" style="display:none;">Save</button>
+            </form>
+            <button onclick="confirmDelete()" class="delete-button">Delete</button>
+
+
+        <a href="/listOfThoughts" class="button back-button">Back to List</a>
+    </div>
+</body>
+</html>
